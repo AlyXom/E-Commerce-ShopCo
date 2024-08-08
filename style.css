@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    
+}
