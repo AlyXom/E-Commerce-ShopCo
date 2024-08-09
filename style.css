@@ -1,10 +1,120 @@
 * {
     margin: 0px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/IntegralCF-Regular.woff2') format('woff2'),
+         url('fonts/IntegralCF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/IntegralCF-Bold.woff2') format('woff2'),
+         url('fonts/IntegralCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('fonts/Satoshi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('fonts/Satoshi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+h1 {
+    font-family: 'Integral CF', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#popup {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#popup > p, span {
+    color: white;
+    font-size: small;
+    padding: 10px;
 }
 
 header {
     display: flex;
-    background-color: aqua;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+}
+
+header > section {
+    display: flex;
+    width: 95%;
     justify-content: space-between;
-    
+    align-items: center;
+}
+
+#search {
+    background-color: #F0F0F0;
+    border-radius: 62px;
+    width: 577px;
+    height: 25px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    transition: 1s;
+}
+
+#search:hover {
+    border: 1px solid black;
+}
+
+#search > input {
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#search > img {
+    margin-left: 10px;
+}
+
+#user-container {
+    display: flex;
+    gap: 20px;
+}
+
+#user-container > img {
+    width: 25px;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+}
+
+ul > li {
+    list-style: none;
+}
+
+main {
+    background-color: #F2F0F1;
+    height: 663px;
 }

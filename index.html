@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Shop.co</title>
 </head>
+
 <body>
 
+    <section id="popup">
+        <div></div>
+        <p>Sign up and get 20% oof to your order.<span>Sign Up Now</span></p>
+        <img style="margin-right: 10px; cursor: pointer;" src="src/assets/cross.svg" alt="">
+    </section>
+
     <header>
-        <h1>SHOP.CO</h1>
-        <nav>opçoes</nav>
-        <div>Pesquisa</div>
-        <section>Usuario</section>
+        <section>
+            <h1>SHOP.CO</h1>
+            <nav>
+                <ul>
+                    <li>Shop <img src="src/assets/drawer-icon.svg" alt=""></li>
+                    <li>On Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Brands</li>
+                </ul>
+            </nav>
+            <span id="search">
+                <img src="src/assets/search-icon.svg" alt="">
+                <input type="text" placeholder="Search for products...">
+            </span>
+            <section id="user-container">
+                <img src="src/assets/cart-icon.svg" alt="">
+                <img src="src/assets/user-icon.svg" alt="">
+            </section>
+        </section>
     </header>
     <main>
         <section>
@@ -30,4 +53,5 @@
 
     <script src="src/dist/index.js"></script>
 </body>
+
 </html>
