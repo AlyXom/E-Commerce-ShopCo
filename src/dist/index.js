@@ -2,6 +2,7 @@
 const hamburger = document.getElementById("hamburger");
 const modal = document.getElementById("modal");
 const drawer = document.getElementsByClassName("drawer");
+const searchBarMobile = document.getElementById("searchBarMobile");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
@@ -22,4 +23,11 @@ function drawerTrueOrFalse() {
         mobileDrawer.style.height = "0px";
     }
 }
-console.log(drawer);
+function showOrHideBar() {
+    if (searchBarMobile.style.height == "0px") {
+        searchBarMobile.style.height = "35px";
+    }
+    else {
+        searchBarMobile.style.height = "0px";
+    }
+}

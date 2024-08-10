@@ -65,12 +65,17 @@
                 <input type="text" placeholder="Search for products...">
             </span>
             <section id="user-container">
-                <img id="searchIcon" src="src/assets/search-icon.svg" alt="">
+                <img onclick="showOrHideBar()" id="searchIcon" src="src/assets/search-icon.svg" alt="">
                 <img src="src/assets/cart-icon.svg" alt="">
                 <img src="src/assets/user-icon.svg" alt="">
             </section>
         </section>
-        <input style="display: none;" type="text">
+        <div id="searchBarMobile" style="height: 0px;">
+            <span>
+                <img src="src/assets/grey-search-icon.svg" alt="">
+                <input type="text" placeholder="Search for products...">
+            </span>
+        </div>
     </header>
     <main>
         <section>

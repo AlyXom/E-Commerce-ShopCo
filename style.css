@@ -148,6 +148,10 @@ header {
     font-size: 17px;
 }
 
+#searchBarMobile {
+    display: none;
+}
+
 main {
     background-color: #F2F0F1;
     height: 663px;
@@ -241,6 +245,38 @@ main {
         position: relative;
         box-shadow: none;
         background-color: #F2F0F1;
+    }
+
+    #searchBarMobile {
+        margin-top: 5px;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+
+    #searchBarMobile > span {
+        background-color: #F0F0F0;
+        display: flex;
+        width: 80%;
+        height: 30%;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    #searchBarMobile > span > img {
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #searchBarMobile > span > input {
+        background-color: transparent;
+        width: 100%;
+        border: none;
+        outline: none;
     }
 }
 
