@@ -10,6 +10,25 @@
 
 <body>
 
+    <section id="modal" style="left: -1000px;">
+        <img onclick="modalTrueOrFalse()" id="closeModal" src="src/assets/black-cross.svg" alt="">
+            <nav>
+                <ul>
+                    <li>
+                        <div>
+                            <p>Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                            <div style="margin-left: 10px;">
+                                <p>blusa</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>On Sale</li>
+                    <li>New Arrivals</li>
+                    <li>Brands</li>
+                </ul>
+            </nav>
+    </section>
+
     <section id="popup">
         <div></div>
         <p>Sign up and get 20% oof to your order. <span>Sign Up Now</span></p>
@@ -17,34 +36,50 @@
     </section>
 
     <header>
-        <section>
+        <section id="header-container">
             <h1>SHOP.CO</h1>
-            <nav>
-                <ul>
-                    <li>Shop <img src="src/assets/drawer-icon.svg" alt=""></li>
-                    <li>On Sale</li>
-                    <li>New Arrivals</li>
-                    <li>Brands</li>
-                </ul>
-            </nav>
+            <div id="menu">
+                <img onclick="modalTrueOrFalse()" id="hamburger" src="src/assets/hamburger.svg" alt="">
+                <nav id="menu-desktop">
+                    <ul>
+                        <li>
+                            <div>
+                                <p>Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                                <div style="margin-left: 10px;">
+                                    <p>blusa</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>On Sale</li>
+                        <li>New Arrivals</li>
+                        <li>Brands</li>
+                    </ul>
+                </nav>
+            </div>
             <span id="search">
-                <img src="src/assets/search-icon.svg" alt="">
+                <img src="src/assets/grey-search-icon.svg" alt="">
                 <input type="text" placeholder="Search for products...">
             </span>
             <section id="user-container">
+                <img id="searchIcon" src="src/assets/search-icon.svg" alt="">
                 <img src="src/assets/cart-icon.svg" alt="">
                 <img src="src/assets/user-icon.svg" alt="">
             </section>
         </section>
+        <input style="display: none;" type="text">
     </header>
     <main>
         <section>
-            painel
+            <section>
+                painel
+            </section>
+            <section>
+                marcas
+            </section>
+            <section>
+                loja
+            </section>
         </section>
-        <section>
-            marcas
-        </section>
-        <section>loja</section>
     </main>
     <footer>
         <section>email</section>
