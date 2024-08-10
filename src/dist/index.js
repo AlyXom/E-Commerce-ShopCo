@@ -3,6 +3,7 @@ const hamburger = document.getElementById("hamburger");
 const modal = document.getElementById("modal");
 const drawer = document.getElementsByClassName("drawer");
 const searchBarMobile = document.getElementById("searchBarMobile");
+const popup = document.getElementById("popup");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
@@ -30,4 +31,7 @@ function showOrHideBar() {
     else {
         searchBarMobile.style.height = "0px";
     }
+}
+function closePopup() {
+    popup.style.height = "0px";
 }

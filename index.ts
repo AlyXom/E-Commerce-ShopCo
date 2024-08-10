@@ -2,6 +2,7 @@ const hamburger = document.getElementById("hamburger") as HTMLImageElement
 const modal = document.getElementById("modal") as HTMLDivElement
 const drawer = document.getElementsByClassName("drawer") as HTMLCollectionOf<HTMLDivElement>
 const searchBarMobile = document.getElementById("searchBarMobile") as HTMLDivElement
+const popup = document.getElementById("popup") as HTMLElement
 
 function modalTrueOrFalse() {
     if(modal.style.left == "0px") {
@@ -31,4 +32,8 @@ function showOrHideBar() {
     } else {
         searchBarMobile.style.height = "0px"
     }
+}
+
+function closePopup() {
+    popup.style.height = "0px"
 }
