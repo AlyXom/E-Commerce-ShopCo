@@ -10,15 +10,17 @@
 
 <body>
 
-    <section id="modal" style="left: -1000px;">
+    <section id="modal" style="left: -1400px;">
         <img onclick="modalTrueOrFalse()" id="closeModal" src="src/assets/black-cross.svg" alt="">
             <nav>
                 <ul>
                     <li>
-                        <div>
-                            <p>Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
-                            <div style="margin-left: 10px;">
-                                <p>blusa</p>
+                        <div id="shop-drawer">
+                            <p onclick="drawerTrueOrFalse()">Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                            <div class="drawer mobile" style="height: 0px;">
+                                <p>T-shirt</p>
+                                <p>Pants</p>
+                                <p>Sweatshirt</p>
                             </div>
                         </div>
                     </li>
@@ -44,9 +46,11 @@
                     <ul>
                         <li>
                             <div>
-                                <p>Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
-                                <div style="margin-left: 10px;">
-                                    <p>blusa</p>
+                                <p onclick="drawerTrueOrFalse()" style="cursor: pointer;">Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                                <div class="drawer" style="height: 0px;">
+                                    <p>T-shirt</p>
+                                    <p>Pants</p>
+                                    <p>Sweatshirt</p>
                                 </div>
                             </div>
                         </li>
