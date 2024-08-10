@@ -246,6 +246,34 @@ main {
         box-shadow: none;
         background-color: #F2F0F1;
     }
+}
+
+
+@media (max-width: 600px) {
+
+    #header-container > h1 {
+        font-size: 25px;
+        margin-right: 0px;
+        position: absolute;
+        margin-left: 8%;
+        z-index: 0;
+    }
+
+    #search {
+        display: none;
+    }
+    
+    #searchIcon {
+        display: block;
+    }
+
+    header > section {
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
 
     #searchBarMobile {
         margin-top: 5px;
@@ -277,33 +305,5 @@ main {
         width: 100%;
         border: none;
         outline: none;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    #header-container > h1 {
-        font-size: 25px;
-        margin-right: 0px;
-        position: absolute;
-        margin-left: 8%;
-        z-index: 0;
-    }
-
-    #search {
-        display: none;
-    }
-    
-    #searchIcon {
-        display: block;
-    }
-
-    header > section {
-        display: flex;
-        width: 95%;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
     }
 }
