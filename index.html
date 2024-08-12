@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/fonts.css">
     <title>Shop.co</title>
 </head>
 
 <body>
 
     <section id="modal" style="left: -1400px;">
-        <img onclick="modalTrueOrFalse()" id="closeModal" src="src/assets/black-cross.svg" alt="">
+        <img onclick="modalTrueOrFalse()" id="closeModal" src="src/assets/icons/black-cross.svg" alt="">
             <nav>
                 <ul>
                     <li>
                         <div id="shop-drawer">
-                            <p onclick="drawerTrueOrFalse()">Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                            <p onclick="drawerTrueOrFalse()">Shop <img src="src/assets/icons/drawer-icon.svg" alt=""></p>
                             <div class="drawer mobile" style="height: 0px;">
                                 <p>T-shirt</p>
                                 <p>Pants</p>
@@ -34,19 +35,19 @@
     <section onclick="closePopup()" id="popup" style="height: 25px; overflow: hidden;">
         <div></div>
         <p>Sign up and get 20% oof to your order. <span>Sign Up Now</span></p>
-        <img id="" style="margin-right: 10px; cursor: pointer;" src="src/assets/cross.svg" alt="">
+        <img id="" style="margin-right: 10px; cursor: pointer;" src="src/assets/icons/cross.svg" alt="">
     </section>
 
     <header>
         <section id="header-container">
             <h1>SHOP.CO</h1>
             <div id="menu">
-                <img onclick="modalTrueOrFalse()" id="hamburger" src="src/assets/hamburger.svg" alt="">
+                <img onclick="modalTrueOrFalse()" id="hamburger" src="src/assets/icons/hamburger.svg" alt="">
                 <nav id="menu-desktop">
                     <ul>
                         <li>
                             <div>
-                                <p onclick="drawerTrueOrFalse()" style="cursor: pointer;">Shop <img src="src/assets/drawer-icon.svg" alt=""></p>
+                                <p onclick="drawerTrueOrFalse()" style="cursor: pointer;">Shop <img src="src/assets/icons/drawer-icon.svg" alt=""></p>
                                 <div class="drawer" style="height: 0px;">
                                     <p>T-shirt</p>
                                     <p>Pants</p>
@@ -61,35 +62,56 @@
                 </nav>
             </div>
             <span id="search">
-                <img src="src/assets/grey-search-icon.svg" alt="">
+                <img src="src/assets/icons/grey-search-icon.svg" alt="">
                 <input type="text" placeholder="Search for products...">
             </span>
             <section id="user-container">
-                <img onclick="showOrHideBar()" id="searchIcon" src="src/assets/search-icon.svg" alt="">
-                <img src="src/assets/cart-icon.svg" alt="">
-                <img src="src/assets/user-icon.svg" alt="">
+                <img onclick="showOrHideBar()" id="searchIcon" src="src/assets/icons/search-icon.svg" alt="">
+                <img src="src/assets/icons/cart-icon.svg" alt="">
+                <img src="src/assets/icons/user-icon.svg" alt="">
             </section>
         </section>
         <div id="searchBarMobile" style="height: 0px;">
             <span>
-                <img src="src/assets/grey-search-icon.svg" alt="">
+                <img src="src/assets/icons/grey-search-icon.svg" alt="">
                 <input type="text" placeholder="Search for products...">
             </span>
         </div>
     </header>
+
     <main>
         <section>
-            <section>
-                painel
-            </section>
-            <section>
-                marcas
-            </section>
-            <section>
-                loja
+            <section id="panel">
+                <article>
+                    <h2>FIND CLOTHES <br> THAT MATCHES <br> YOUR STYLE</h2>
+                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                    <button>Shop Now</button>
+                    <div>
+                        <article class="border">
+                            <strong>200+</strong>
+                            <p>International Brands</p>
+                        </article>
+                        <article class="border">
+                            <strong>2.000+</strong>
+                            <p>High-Quality Products</p>
+                        </article>
+                        <article>
+                            <strong>30.000+</strong>
+                            <p>Happy Customers</p>
+                        </article>
+                    </div>
+                </article>
+                <div id="couple">
+                    <div>
+                        <img id="star1" src="src/assets/icons/star.svg" alt="">
+                        <img id="star2" src="src/assets/icons/star.svg" alt="">
+                    </div>
+                    <img src="src/assets/images/couple.jpeg" alt="">
+                </div>
             </section>
         </section>
     </main>
+
     <footer>
         <section>email</section>
         <section>contact</section>
