@@ -119,7 +119,7 @@ header {
 
 /* Main css */
 
-main > section {
+#banner {
     background-color: #F2F0F1;
     display: flex;
     justify-content: center;
@@ -239,6 +239,31 @@ main > section {
     position: relative;
     z-index: 0;
 }
+
+#brands {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+}
+
+#brands > section {
+    width: 96%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#brands > section > article {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 
 @media (max-width: 1300px) {
 
@@ -368,6 +393,10 @@ main > section {
     #couple > div {
         width: 55%;
     }
+
+    #brands > section > article > img {
+        width: 150px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -426,6 +455,15 @@ main > section {
 
     #panel > article > div > article > p {
         font-size: 14px;
+    }
+
+    #brands > section > article {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    #brands > section > article > img {
+        width: 130px;
     }
 
 }
@@ -489,12 +527,12 @@ main > section {
         outline: none;
     }
 
+
+    /* Main */
+
     #panel {
         flex-direction: column;
     }
-
-
-    /* Main */
 
     #panel > article {
         margin-top: 5px;
@@ -507,6 +545,15 @@ main > section {
     #panel > article > button {
         width: 90%;
         margin-bottom: 20px;
+    }
+
+    #panel > article > div {
+        justify-content: center;
+    }
+
+    #panel > article > div > article {
+        text-align: center;
+        width: 120px;
     }
 
     #couple {
@@ -528,5 +575,17 @@ main > section {
         margin-left: 20px;
         width: 40px;
         margin-top: 40px;
+    }
+
+    #brands > section {
+        margin-top: 10px;
+    }
+
+    #brands > section > article {
+        flex: 0.8;
+    }
+
+    #brands > section > article > img {
+        width: 120px;
     }
 }
