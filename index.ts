@@ -4,6 +4,24 @@ const drawer = document.getElementsByClassName("drawer") as HTMLCollectionOf<HTM
 const searchBarMobile = document.getElementById("searchBarMobile") as HTMLDivElement
 const popup = document.getElementById("popup") as HTMLElement
 
+interface Clothes {
+    name: string,
+    image: string,
+    stars: number,
+    price: number,
+    discount: number
+}
+
+const new_arrival: Clothes[] = [
+    {
+        name: "T-shirt with Tape Details",
+        image: "src/assets/clothes/t-shirt-1.png",
+        price: 120,
+        discount: 0,
+        stars: 4.5
+    }
+] 
+
 function modalTrueOrFalse() {
     if(modal.style.left == "0px") {
         modal.style.left = "-1400px"

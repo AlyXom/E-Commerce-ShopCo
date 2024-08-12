@@ -1,3 +1,8 @@
+body {
+    max-width: 1500px;
+    margin: 0px auto;
+}
+
 /* Header css */
 
 #modal {
@@ -198,7 +203,7 @@ header {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2); /* Aumenta o tamanho em 10% */
+        transform: scale(1.2);
     }
     100% {
         transform: scale(1);
@@ -210,7 +215,7 @@ header {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1); /* Aumenta o tamanho em 10% */
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -262,6 +267,33 @@ header {
     justify-content: center;
     align-items: center;
     
+}
+
+#shop {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+#shop > div {
+    margin-top: 50px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.containers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+.containers > h2 {
+    font-family: 'Integral CF', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
 }
 
 
@@ -396,6 +428,11 @@ header {
 
     #brands > section > article > img {
         width: 150px;
+    }
+
+    #zara {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -542,6 +579,13 @@ header {
         align-self: flex-start;
     }
 
+    #panel > article > p {
+        align-self: flex-start;
+        font-size: 13px;
+        width: 300px;
+        text-align: start;
+    }
+
     #panel > article > button {
         width: 90%;
         margin-bottom: 20px;
@@ -586,6 +630,11 @@ header {
     }
 
     #brands > section > article > img {
-        width: 120px;
+        width: 120;
+    }
+
+    #zara {
+        width: 35px;
+        height: 35px;
     }
 }
