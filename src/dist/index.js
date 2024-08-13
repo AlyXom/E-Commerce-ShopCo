@@ -14,14 +14,6 @@ function modalTrueOrFalse() {
         modal.style.left = "0px";
     }
 }
-function viewAll() {
-    if (box.className == "switchOn") {
-        box.className = "switchOff";
-    }
-    else {
-        box.className = "switchOn";
-    }
-}
 function drawerTrueOrFalse() {
     const deskDrawer = drawer[0];
     const mobileDrawer = drawer[1];
@@ -47,7 +39,7 @@ function closePopup() {
 }
 function reviewRate(stars) {
     let starsHtml = "";
-    for (var n = 0; n <= stars; n++) {
+    for (var n = 0; n < stars; n++) {
         var midstar = stars - n;
         if (midstar == 0.5) {
             starsHtml += "<img src='src/assets/icons/mid-star.svg' />";
@@ -57,6 +49,14 @@ function reviewRate(stars) {
         }
     }
     return starsHtml;
+}
+function viewAll() {
+    if (box.className == "switchOn") {
+        box.className = "switchOff";
+    }
+    else {
+        box.className = "switchOn";
+    }
 }
 const new_arrival = [
     {
@@ -86,6 +86,55 @@ const new_arrival = [
         price: 160,
         discount: 30,
         stars: 4.5
+    },
+    {
+        name: "Vertical Striped Shirt",
+        image: "src/assets/clothes/t-shirt-4.png",
+        price: 212,
+        discount: 20,
+        stars: 5
+    },
+    {
+        name: "Courage Graphic T-shirt",
+        image: "src/assets/clothes/t-shirt-5.png",
+        price: 145,
+        discount: 0,
+        stars: 4
+    },
+    {
+        name: "Loose Fit Bermuda Shorts",
+        image: "src/assets/clothes/pants-2.png",
+        price: 80,
+        discount: 0,
+        stars: 3
+    },
+    {
+        name: "Faded Skinny Jeans",
+        image: "src/assets/clothes/pants-3.png",
+        price: 210,
+        discount: 0,
+        stars: 4.5
+    },
+    {
+        name: "Gradient Graphic T-shirt",
+        image: "src/assets/clothes/t-shirt-6.png",
+        price: 145,
+        discount: 0,
+        stars: 3.5
+    },
+    {
+        name: "Polo with Tipping Details",
+        image: "src/assets/clothes/t-shirt-7.png",
+        price: 180,
+        discount: 0,
+        stars: 4.5
+    },
+    {
+        name: "Black Striped T-shirt",
+        image: "src/assets/clothes/t-shirt-8.png",
+        price: 120,
+        discount: 30,
+        stars: 5
     }
 ];
 new_arrival.forEach(({ name, image, price, discount, stars }) => {
@@ -101,28 +150,7 @@ new_arrival.forEach(({ name, image, price, discount, stars }) => {
                 <p>${stars}/<span>5</span></p>
                 </span>
                 <div id="infos">
-                    <p>$${price - ((discount / 100) * price)}</p>
-                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
-                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
-                </div>
-            </article>
-        </div>
-    `;
-});
-new_arrival.forEach(({ name, image, price, discount, stars }) => {
-    clothes.innerHTML += `
-        <div class="cards">
-            <section>
-                <img class="card-image" src="${image}"/>
-            </section>
-            <article>
-                <p>${name}</p>
-                <span>
-                ${reviewRate(stars)}
-                <p>${stars}/<span>5</span></p>
-                </span>
-                <div id="infos">
-                    <p>$${price - ((discount / 100) * price)}</p>
+                    <p>$${Math.floor(price - ((discount / 100) * price))}</p>
                     <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
                     ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
                 </div>
