@@ -4,12 +4,22 @@ const drawer = document.getElementsByClassName("drawer") as HTMLCollectionOf<HTM
 const searchBarMobile = document.getElementById("searchBarMobile") as HTMLDivElement
 const popup = document.getElementById("popup") as HTMLElement
 const clothes = document.getElementById("clothes") as HTMLElement
+const box = document.getElementById("box") as HTMLDivElement
+
 
 function modalTrueOrFalse() {
     if(modal.style.left == "0px") {
         modal.style.left = "-1400px"
     } else {
         modal.style.left = "0px"
+    }
+}
+
+function viewAll() {
+    if(box.className == "switchOn") {
+        box.className = "switchOff"
+    } else {
+        box.className = "switchOn"
     }
 }
 
@@ -64,6 +74,8 @@ interface Clothes {
     discount: number
 }
 
+
+
 const new_arrival: Clothes[] = [
     {
         name: "T-shirt with Tape Details",
@@ -95,6 +107,28 @@ const new_arrival: Clothes[] = [
     }
 ]
 
+
+new_arrival.forEach(({name, image, price, discount, stars}) => {
+    clothes.innerHTML += `
+        <div class="cards">
+            <section>
+                <img class="card-image" src="${image}"/>
+            </section>
+            <article>
+                <p>${name}</p>
+                <span>
+                ${reviewRate(stars)}
+                <p>${stars}/<span>5</span></p>
+                </span>
+                <div id="infos">
+                    <p>$${price - ((discount / 100) * price)}</p>
+                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
+                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
+                </div>
+            </article>
+        </div>
+    `
+})
 
 new_arrival.forEach(({name, image, price, discount, stars}) => {
     clothes.innerHTML += `

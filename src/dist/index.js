@@ -5,12 +5,21 @@ const drawer = document.getElementsByClassName("drawer");
 const searchBarMobile = document.getElementById("searchBarMobile");
 const popup = document.getElementById("popup");
 const clothes = document.getElementById("clothes");
+const box = document.getElementById("box");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
     }
     else {
         modal.style.left = "0px";
+    }
+}
+function viewAll() {
+    if (box.className == "switchOn") {
+        box.className = "switchOff";
+    }
+    else {
+        box.className = "switchOn";
     }
 }
 function drawerTrueOrFalse() {
@@ -79,6 +88,27 @@ const new_arrival = [
         stars: 4.5
     }
 ];
+new_arrival.forEach(({ name, image, price, discount, stars }) => {
+    clothes.innerHTML += `
+        <div class="cards">
+            <section>
+                <img class="card-image" src="${image}"/>
+            </section>
+            <article>
+                <p>${name}</p>
+                <span>
+                ${reviewRate(stars)}
+                <p>${stars}/<span>5</span></p>
+                </span>
+                <div id="infos">
+                    <p>$${price - ((discount / 100) * price)}</p>
+                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
+                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
+                </div>
+            </article>
+        </div>
+    `;
+});
 new_arrival.forEach(({ name, image, price, discount, stars }) => {
     clothes.innerHTML += `
         <div class="cards">

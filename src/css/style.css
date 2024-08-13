@@ -270,16 +270,25 @@ header {
 }
 
 #shop {
-    height: 800px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-#shop > div {
-    margin-top: 50px;
+.switchOn {
+    margin-top: 10px;
     width: 95%;
-    justify-content: center;
+    height: 900px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.switchOff {
+    margin-top: 10px;
+    width: 95%;
+    height: 450px;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
 .containers {
@@ -287,26 +296,32 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 500px;
 }
 
-.containers > h2 {
+#shop > h2 {
+    margin-top: 30px;
     font-family: 'Integral CF', sans-serif;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 800;
 }
 
 .containers > section {
     width: 99%;
-    height: 80%;
+    height: 100%;
     display: flex;
-    margin-top: 30px;
     justify-content: space-between;
+}
+
+#clothes {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 .cards {
     width: 300px;
-    height: 380px;
+    height: 410px;
+    margin-bottom: 50px;
 }
 
 .cards > article > span {
@@ -359,13 +374,13 @@ header {
 }
 
 #expand-button {
-    margin-top: 70px;
     background-color: white;
     border: rgba(0, 0, 0, 0.1) 1px solid;
     padding: 16px 64px;
     border-radius: 30px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 20px;
 }
 
 #expand-button:hover {
@@ -712,5 +727,67 @@ header {
     #zara {
         width: 35px;
         height: 35px;
+    }
+
+
+    .switchOn {
+        height: 550px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    .switchOff {
+        height: 280px;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    #clothes {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cards {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 120px;
+    }
+
+    .card-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .cards > article {
+        height: 100px;
+    }
+
+    .cards > article > p {
+        font-size: 14px;
+    }
+
+    .cards > article > span {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cards > article > span > p {
+        font-size: 14px;
+    }
+
+    .cards > article > span > p > span {
+        font-size: 13px;
+    }
+
+    #infos > p {
+        font-size: 17px;
+    }
+
+    .float-discount {
+        padding: 5px 10px;
+    }
+
+    #expand-button {
+        width: 90%;
     }
 }
