@@ -5,7 +5,9 @@ const drawer = document.getElementsByClassName("drawer");
 const searchBarMobile = document.getElementById("searchBarMobile");
 const popup = document.getElementById("popup");
 const clothes = document.getElementById("clothes");
+const topSelling = document.getElementById("topSelling");
 const box = document.getElementById("box");
+const boxSelling = document.getElementById("boxSelling");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
@@ -50,12 +52,26 @@ function reviewRate(stars) {
     }
     return starsHtml;
 }
-function viewAll() {
-    if (box.className == "switchOn") {
-        box.className = "switchOff";
+function viewAll(element) {
+    if (element.id == "arrival") {
+        if (box.className == "switchOn") {
+            box.className = "switchOff";
+            element.textContent = "View All";
+        }
+        else {
+            box.className = "switchOn";
+            element.textContent = "View Less";
+        }
     }
     else {
-        box.className = "switchOn";
+        if (boxSelling.className == "switchOn") {
+            boxSelling.className = "switchOff";
+            element.textContent = "View All";
+        }
+        else {
+            boxSelling.className = "switchOn";
+            element.textContent = "View Less";
+        }
     }
 }
 const new_arrival = [
@@ -139,6 +155,28 @@ const new_arrival = [
 ];
 new_arrival.forEach(({ name, image, price, discount, stars }) => {
     clothes.innerHTML += `
+        <div class="cards">
+            <section>
+                <img class="card-image" src="${image}"/>
+            </section>
+            <article>
+                <p>${name}</p>
+                <span>
+                ${reviewRate(stars)}
+                <p>${stars}/<span>5</span></p>
+                </span>
+                <div id="infos">
+                    <p>$${Math.floor(price - ((discount / 100) * price))}</p>
+                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
+                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
+                </div>
+            </article>
+        </div>
+    `;
+});
+const top_selling = new_arrival.reverse().filter((item => item.stars >= 4));
+top_selling.forEach(({ name, image, price, discount, stars }) => {
+    topSelling.innerHTML += `
         <div class="cards">
             <section>
                 <img class="card-image" src="${image}"/>

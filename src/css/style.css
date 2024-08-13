@@ -269,7 +269,7 @@ header {
     
 }
 
-#shop {
+.shop {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -298,7 +298,7 @@ header {
     flex-direction: column;
 }
 
-#shop > h2 {
+.shop > h2 {
     margin-top: 30px;
     font-family: 'Integral CF', sans-serif;
     font-size: 34px;
@@ -313,6 +313,12 @@ header {
 }
 
 #clothes {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+#topSelling {
     display: flex;
     height: 100%;
     flex-wrap: wrap;
@@ -373,7 +379,9 @@ header {
     border-radius: 30px;
 }
 
-#expand-button {
+.expand-button {
+    font-size: 18px;
+    font-weight: 700;
     background-color: white;
     border: rgba(0, 0, 0, 0.1) 1px solid;
     padding: 16px 64px;
@@ -383,8 +391,9 @@ header {
     margin-bottom: 20px;
 }
 
-#expand-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.expand-button:hover {
+    background-color: black;
+    color: white;
 }
 
 
@@ -466,7 +475,7 @@ header {
 
     }
 
-    #shop-drawer > p  {
+    .shop-drawer > p  {
         font-size: 20px;
         text-align: center;
     }
@@ -787,7 +796,7 @@ header {
         padding: 5px 10px;
     }
 
-    #expand-button {
+    .expand-button {
         width: 90%;
     }
 }

@@ -118,7 +118,7 @@
                 <article><img src="src/assets/icons/calvin-klein.svg" alt=""></article>
             </section>
         </section>
-        <section id="shop">
+        <section class="shop">
             <h2>NEW ARRIVALS</h2>
             <div class="switchOff" id="box">
                 <section class="containers">
@@ -126,8 +126,18 @@
                     </section>
                 </section>
             </div>
-            <button onclick="viewAll()" id="expand-button">View All</button>
+            <button id="arrival" onclick="viewAll(this)" class="expand-button">View All</button>
             <hr style="width: 100%; border: rgba(0, 0, 0, 0.1) 1px solid;">
+        </section>
+        <section class="shop">
+            <h2>TOP SELLING</h2>
+            <div class="switchOff" id="boxSelling">
+                <section class="containers">
+                    <section id="topSelling">
+                    </section>
+                </section>
+            </div>
+            <button id="selling" onclick="viewAll(this)" class="expand-button">View All</button>
         </section>
     </main>
 
