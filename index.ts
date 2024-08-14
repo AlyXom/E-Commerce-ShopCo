@@ -7,6 +7,8 @@ const clothes = document.getElementById("clothes") as HTMLElement
 const topSelling = document.getElementById("topSelling") as HTMLElement
 const box = document.getElementById("box") as HTMLDivElement
 const boxSelling = document.getElementById("boxSelling") as HTMLDivElement
+const cards_carousel = document.querySelectorAll(".card-carousel")
+
 
 function modalTrueOrFalse() {
     if(modal.style.left == "0px") {
@@ -79,6 +81,10 @@ function viewAll(element: HTMLButtonElement) {
             element.textContent = "View Less"
         }
     }
+}
+
+function carousel(element: HTMLButtonElement) {
+    console.log(element)
 }
 
 interface Clothes {

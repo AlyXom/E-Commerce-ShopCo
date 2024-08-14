@@ -8,6 +8,7 @@ const clothes = document.getElementById("clothes");
 const topSelling = document.getElementById("topSelling");
 const box = document.getElementById("box");
 const boxSelling = document.getElementById("boxSelling");
+const cards_carousel = document.querySelectorAll(".card-carousel");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
@@ -73,6 +74,9 @@ function viewAll(element) {
             element.textContent = "View Less";
         }
     }
+}
+function carousel(element) {
+    console.log(element);
 }
 const new_arrival = [
     {
