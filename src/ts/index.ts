@@ -7,7 +7,6 @@ const clothes = document.getElementById("clothes") as HTMLElement
 const topSelling = document.getElementById("topSelling") as HTMLElement
 const box = document.getElementById("box") as HTMLDivElement
 const boxSelling = document.getElementById("boxSelling") as HTMLDivElement
-const cards_carousel = document.querySelectorAll(".card-carousel")
 
 
 function modalTrueOrFalse() {
@@ -83,10 +82,6 @@ function viewAll(element: HTMLButtonElement) {
     }
 }
 
-function carousel(element: HTMLButtonElement) {
-    console.log(element)
-}
-
 interface Clothes {
     name: string,
     image: string,
@@ -94,7 +89,6 @@ interface Clothes {
     price: number,
     discount: number
 }
-
 
 
 const new_arrival: Clothes[] = [
@@ -201,7 +195,7 @@ new_arrival.forEach(({name, image, price, discount, stars}) => {
     `
 })
 
-const top_selling: Clothes[] = new_arrival.reverse().filter((item => item.stars >= 4))
+const top_selling: Clothes[] = new_arrival.filter((item => item.stars >= 4)).sort((a, b) => a.stars - b.stars).reverse()
 
 top_selling.forEach(({name, image, price, discount, stars}) => {
     topSelling.innerHTML += `

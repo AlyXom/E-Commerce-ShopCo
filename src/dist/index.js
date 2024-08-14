@@ -8,7 +8,6 @@ const clothes = document.getElementById("clothes");
 const topSelling = document.getElementById("topSelling");
 const box = document.getElementById("box");
 const boxSelling = document.getElementById("boxSelling");
-const cards_carousel = document.querySelectorAll(".card-carousel");
 function modalTrueOrFalse() {
     if (modal.style.left == "0px") {
         modal.style.left = "-1400px";
@@ -74,9 +73,6 @@ function viewAll(element) {
             element.textContent = "View Less";
         }
     }
-}
-function carousel(element) {
-    console.log(element);
 }
 const new_arrival = [
     {
@@ -178,7 +174,7 @@ new_arrival.forEach(({ name, image, price, discount, stars }) => {
         </div>
     `;
 });
-const top_selling = new_arrival.reverse().filter((item => item.stars >= 4));
+const top_selling = new_arrival.filter((item => item.stars >= 4)).sort((a, b) => a.stars - b.stars).reverse();
 top_selling.forEach(({ name, image, price, discount, stars }) => {
     topSelling.innerHTML += `
         <div class="cards">
