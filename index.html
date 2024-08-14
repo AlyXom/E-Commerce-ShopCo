@@ -12,23 +12,23 @@
 <body>
     <section id="modal" style="left: -1400px;">
         <img onclick="modalTrueOrFalse()" id="closeModal" src="src/assets/icons/black-cross.svg" alt="">
-            <nav>
-                <ul>
-                    <li>
-                        <div id="shop-drawer">
-                            <p onclick="drawerTrueOrFalse()">Shop <img src="src/assets/icons/drawer-icon.svg" alt=""></p>
-                            <div class="drawer mobile" style="height: 0px;">
-                                <p>T-shirt</p>
-                                <p>Pants</p>
-                                <p>Sweatshirt</p>
-                            </div>
+        <nav>
+            <ul>
+                <li>
+                    <div id="shop-drawer">
+                        <p onclick="drawerTrueOrFalse()">Shop <img src="src/assets/icons/drawer-icon.svg" alt=""></p>
+                        <div class="drawer mobile" style="height: 0px;">
+                            <p>T-shirt</p>
+                            <p>Pants</p>
+                            <p>Sweatshirt</p>
                         </div>
-                    </li>
-                    <li>On Sale</li>
-                    <li>New Arrivals</li>
-                    <li>Brands</li>
-                </ul>
-            </nav>
+                    </div>
+                </li>
+                <li>On Sale</li>
+                <li>New Arrivals</li>
+                <li>Brands</li>
+            </ul>
+        </nav>
     </section>
 
     <section onclick="closePopup()" id="popup" style="height: 25px; overflow: hidden;">
@@ -46,7 +46,8 @@
                     <ul>
                         <li>
                             <div>
-                                <p onclick="drawerTrueOrFalse()" style="cursor: pointer;">Shop <img src="src/assets/icons/drawer-icon.svg" alt=""></p>
+                                <p onclick="drawerTrueOrFalse()" style="cursor: pointer;">Shop <img
+                                        src="src/assets/icons/drawer-icon.svg" alt=""></p>
                                 <div class="drawer" style="height: 0px;">
                                     <p>T-shirt</p>
                                     <p>Pants</p>
@@ -83,7 +84,8 @@
             <section id="panel">
                 <article>
                     <h2>FIND CLOTHES <br> THAT MATCHES <br> YOUR STYLE</h2>
-                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your
+                        individuality and cater to your sense of style.</p>
                     <button>Shop Now</button>
                     <div>
                         <article class="border">
@@ -138,6 +140,25 @@
                 </section>
             </div>
             <button id="selling" onclick="viewAll(this)" class="expand-button">View All</button>
+        </section>
+        <section id="dressStyle">
+            <section>
+                <h2>BROWSE BY DRESS STYLE</h2>
+                <section>
+                    <div style="background-image: url(src/assets/images/casual.png); width: 400px;" class="dress-card">
+                        <p>Casual</p>
+                    </div>
+                    <div style="background-image: url(src/assets/images/formal.png); width: 600px;" class="dress-card">
+                        <p>Formal</p>
+                    </div>
+                    <div style="background-image: url(src/assets/images/party.png); width: 600px;" class="dress-card">
+                        <p>Party</p>
+                    </div>
+                    <div style="background-image: url(src/assets/images/gym.png); width: 400px;" class="dress-card">
+                        <p>Gym</p>
+                    </div>
+                </section>
+            </section>
         </section>
     </main>
 
