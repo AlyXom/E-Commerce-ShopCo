@@ -97,7 +97,6 @@ const object: Clothes[] = [
 
 ]
 
-
 function modalTrueOrFalse() {
     if(modal.style.left == "0px") {
         modal.style.left = "-1400px"
