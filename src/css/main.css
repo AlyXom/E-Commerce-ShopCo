@@ -674,7 +674,7 @@ button:active {
     }
 
     .product-info > p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .product-info > span {
@@ -691,11 +691,16 @@ button:active {
     }
 
     #infos > p {
-        font-size: 17px;
+        font-size: 15px;
+    }
+
+    .discount {
+        font-size: 15px;
     }
 
     .float-discount {
         padding: 5px 10px;
+        font-size: 12px;
     }
 
     .expand-button {
