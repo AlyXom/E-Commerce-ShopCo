@@ -1,6 +1,6 @@
 const hamburger = document.getElementById("hamburger") as HTMLImageElement
 const modal = document.getElementById("modal") as HTMLDivElement
-const drawer = document.getElementsByClassName("drawer") as HTMLCollectionOf<HTMLDivElement>
+const drawer = document.querySelector(".drawer") as HTMLDivElement
 const searchBarMobile = document.getElementById("searchBarMobile") as HTMLDivElement
 const popup = document.getElementById("popup") as HTMLElement
 const clothes = document.getElementById("clothes") as HTMLElement
@@ -17,17 +17,13 @@ function modalTrueOrFalse() {
     }
 }
 
+console.log(drawer)
+
 function drawerTrueOrFalse() {
-
-    const deskDrawer = drawer[0]
-    const mobileDrawer = drawer[1]
-
-    if(deskDrawer.style.height == "0px" && mobileDrawer.style.height == "0px") {
-        deskDrawer.style.height = "70px"
-        mobileDrawer.style.height = "70px"
+    if(drawer.style.height == "0px") {
+        drawer.style.height = "80px"
     } else {
-        deskDrawer.style.height = "0px"
-        mobileDrawer.style.height = "0px"
+        drawer.style.height = "0px"
     }
 }
 
@@ -203,7 +199,7 @@ top_selling.forEach(({name, image, price, discount, stars}) => {
             <section>
                 <img class="card-image" src="${image}"/>
             </section>
-            <article>
+            <article class="product-info">
                 <p>${name}</p>
                 <span>
                 ${reviewRate(stars)}

@@ -113,14 +113,11 @@ header {
 }
 
 .drawer > p {
+    margin-top: 3px;
     padding: 2px;
     text-align: center;
     font-size: 17px;
     text-decoration: underline;
-}
-
-.drawer > p:hover {
-    background-color: #F0F0F0;
 }
 
 #searchBarMobile {
@@ -182,7 +179,7 @@ header {
     }
 
     #modal > nav > ul {
-        width: 50%;
+        width: 80%;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -203,19 +200,6 @@ header {
         border-radius: 5px;
         cursor: pointer;
 
-    }
-
-    .shop-drawer > p  {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .mobile {
-        min-width: 100px;
-        margin-left: 0px;
-        position: relative;
-        box-shadow: none;
-        background-color: #F2F0F1;
     }
 }
 

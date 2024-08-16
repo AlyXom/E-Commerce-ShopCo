@@ -1,7 +1,7 @@
 "use strict";
 const hamburger = document.getElementById("hamburger");
 const modal = document.getElementById("modal");
-const drawer = document.getElementsByClassName("drawer");
+const drawer = document.querySelector(".drawer");
 const searchBarMobile = document.getElementById("searchBarMobile");
 const popup = document.getElementById("popup");
 const clothes = document.getElementById("clothes");
@@ -16,16 +16,13 @@ function modalTrueOrFalse() {
         modal.style.left = "0px";
     }
 }
+console.log(drawer);
 function drawerTrueOrFalse() {
-    const deskDrawer = drawer[0];
-    const mobileDrawer = drawer[1];
-    if (deskDrawer.style.height == "0px" && mobileDrawer.style.height == "0px") {
-        deskDrawer.style.height = "70px";
-        mobileDrawer.style.height = "70px";
+    if (drawer.style.height == "0px") {
+        drawer.style.height = "80px";
     }
     else {
-        deskDrawer.style.height = "0px";
-        mobileDrawer.style.height = "0px";
+        drawer.style.height = "0px";
     }
 }
 function showOrHideBar() {
@@ -181,7 +178,7 @@ top_selling.forEach(({ name, image, price, discount, stars }) => {
             <section>
                 <img class="card-image" src="${image}"/>
             </section>
-            <article>
+            <article class="product-info">
                 <p>${name}</p>
                 <span>
                 ${reviewRate(stars)}
