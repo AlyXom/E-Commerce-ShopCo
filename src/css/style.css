@@ -1220,6 +1220,7 @@ footer > div {
 
     #footer-navigation > div > section {
         height: 100%;
+        width: 50%;
     }
 
     #copyright {
