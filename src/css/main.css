@@ -1,0 +1,724 @@
+#banner {
+    background-color: #F2F0F1;
+    display: flex;
+    justify-content: center;
+}
+
+#panel {
+    width: 95%;
+    display: flex;
+    height: 600px;
+    overflow: hidden;
+}
+
+#panel > article {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+#panel > article > h2 {
+    font-size: 50px;
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 800;
+}
+
+#panel > article > p {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    width: 400px;
+}
+
+#panel > article > button {
+    margin: 30px 0px;
+    padding: 15px;
+    width: 200px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.border {
+    border-right: rgba(0, 0, 0, 0.1) solid 1px;
+    width: 200px;
+}
+
+#panel > article > div > article > strong {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#panel > article > div > article > p {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#panel > article > div {
+    display: flex;
+    gap: 30px;
+}
+
+#couple {
+    flex: 1;
+}
+
+#couple > div {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    z-index: 1;
+    display: grid;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#star1 {
+    grid-column: 2 / -1;
+    margin-left: 75%;
+    margin-top: 50px;
+    width: 80px;
+    animation: pulse 1.2s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#star2 {
+    grid-row: 2 / 2;
+    animation: pulse 1s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#couple > img {
+    object-fit: cover;
+    width: 630px;
+    height: 800px;
+    position: relative;
+    z-index: 0;
+}
+
+#brands {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+}
+
+#brands > section {
+    width: 96%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#brands > section > article {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shop {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.switchOn {
+    margin-top: 10px;
+    width: 95%;
+    height: 900px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.switchOff {
+    margin-top: 10px;
+    width: 95%;
+    height: 450px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.containers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shop > h2 {
+    margin-top: 30px;
+    font-family: 'Integral CF', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.containers > section {
+    width: 99%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#clothes {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+#topSelling {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 300px;
+    height: 410px;
+    margin-bottom: 50px;
+}
+
+.cards > article > span {
+    display: flex;
+}
+
+.cards > article > p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cards > article > span > p {
+    color: black;
+    margin-left: 10px;
+}
+
+.cards > article > span > p > span {
+    color: grey;
+    font-size: 15px;
+}
+
+.card-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+#infos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#infos > p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+button {
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.discount {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: line-through;
+}
+
+.float-discount {
+    color: #FF3333;
+    background-color: rgba(255, 51, 51, 0.1);
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.expand-button {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: white;
+    border: rgba(0, 0, 0, 0.1) 1px solid;
+    padding: 16px 64px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.expand-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Browse your dress style */
+
+#dressStyle {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dressStyle > section {
+    border-radius: 30px;
+    background-color: #F0F0F0;
+    width: 90%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dressStyle > section > h2 {
+    margin: 50px 0px;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+#dressStyle > section > section {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dress-card {
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    flex-grow: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dress-card:hover {
+    transform: scale(1.05);
+}
+
+.dress-card > p {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#carousel {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#carousel > section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#carousel > section > h2 {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+#carousel > section > div > img {
+    transition: 0.5s;
+}
+
+#carousel > section > div >img:hover {
+    transform: scale(1.10);
+}
+
+#carousel > div {
+    margin-top: 40px;
+    height: 300px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#carousel > section > div > img {
+    cursor: pointer;
+}
+
+#swaper {
+    display: flex;
+    gap: 10px;
+    transition: all 0.5s;
+}
+
+.card-carousel {
+    min-width: 355px;
+    width: 340px;
+    height: 250px;
+    padding: 28px 30px;
+    border-radius: 20px;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+.card-carousel > section {
+    height: 100%;
+}
+
+.card-customer {
+    height: 80%;
+}
+
+.card-customer > h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.card-customer > p {
+    color: rgba(0, 0, 0, 0.6);
+    height: 80%;
+    font-size: 18px;
+}
+
+
+@media (max-width: 1300px) {
+
+    #panel > article {
+        flex: 1;
+        width: 40%;
+    }
+
+    #panel > article > h2 {
+        font-size: 35px;
+    }
+
+    #panel > article > div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    #panel > article > div > article {
+        width: 150px;
+    }
+
+    #panel > article > button {
+        align-self: center;
+        margin-right: 20px;
+    }
+
+    #panel > article > div > article > strong {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    #couple > div {
+        width: 55%;
+    }
+
+    #brands > section > article > img {
+        width: 150px;
+    }
+
+    #zara {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    #dressStyle > section {
+        overflow: hidden;
+        height: 1800px;
+    }
+
+    #carousel > section > div {
+        width: 100px;
+    }
+
+    #swaper {
+        gap: 10px;
+    }
+
+    .card-carousel {
+        min-width: 41%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    #panel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 750px;
+    }
+
+    #couple > div {
+        width: 600px;
+    }
+
+    #couple > img {
+        width: 400px;
+        height: 500px;
+        margin-bottom: 200px;
+    }
+
+
+    #panel > article {
+        align-items: center;
+        width: 100%;
+    }
+
+    #couple {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    #star2 {
+        margin-bottom: 400px;
+        margin-left: 100px;
+    }
+
+    #panel > article > h2 {
+        font-size: 30px;
+    }
+
+    #panel > article > button {
+        padding: 10px;
+        width: 120px;
+        margin: 10px auto;
+    }
+
+    #panel > article > div > article > strong {
+        font-size: 20px;
+    }
+
+    #panel > article > div > article > p {
+        font-size: 14px;
+    }
+
+    #brands > section > article {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    #brands > section > article > img {
+        width: 130px;
+    }
+
+    #swaper {
+        gap: 10px;
+    }
+
+    .card-carousel {
+        min-width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    #panel {
+        flex-direction: column;
+    }
+
+    #panel > article {
+        margin-top: 5px;
+    }
+
+    #panel > article > h2 {
+        align-self: flex-start;
+    }
+
+    #panel > article > p {
+        align-self: flex-start;
+        font-size: 13px;
+        width: 300px;
+        text-align: start;
+    }
+
+    #panel > article > button {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #panel > article > div {
+        justify-content: center;
+    }
+
+    #panel > article > div > article {
+        text-align: center;
+        width: 120px;
+    }
+
+    #couple {
+        margin-top: 20px;
+    }
+
+    #couple > div {
+        width: 95%;
+        height: 320px;
+    }
+
+    #star1 {
+        margin-left: 80%;
+        width: 50px;
+        margin-top: 50px;
+    }
+
+    #star2 {
+        margin-left: 20px;
+        width: 40px;
+        margin-top: 40px;
+    }
+
+    #brands > section {
+        margin-top: 10px;
+    }
+
+    #brands > section > article {
+        flex: 0.8;
+    }
+
+    #brands > section > article > img {
+        width: 120;
+    }
+
+    #zara {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .switchOn {
+        height: 550px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    .switchOff {
+        height: 280px;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    #clothes {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cards {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 120px;
+    }
+
+    .card-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .cards > article {
+        height: 100px;
+    }
+
+    .cards > article > p {
+        font-size: 14px;
+    }
+
+    .cards > article > span {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cards > article > span > p {
+        font-size: 14px;
+    }
+
+    .cards > article > span > p > span {
+        font-size: 13px;
+    }
+
+    #infos > p {
+        font-size: 17px;
+    }
+
+    .float-discount {
+        padding: 5px 10px;
+    }
+
+    .expand-button {
+        width: 90%;
+    }
+
+    #dressStyle > section {
+        height: 970px;
+    }
+
+    #dressStyle > section > h2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 30px 0px;
+    }
+
+    #dressStyle > section > section {
+        width: 90%;
+        gap: 0px;
+
+    }
+
+    .dress-card {
+        width: 200px;
+        height: 190px;
+    }
+
+    .dress-card > p {
+        font-size: 24px;
+    }
+
+    #carousel {
+        margin-top: 50px;
+    }
+
+    #carousel > section > h2 {
+        font-size: 30px;
+    }
+
+    #swaper {
+        gap: 10px;
+    }
+
+    #carousel > section > div {
+        width: 100px;
+    }
+
+    .card-carousel {
+        min-width: none;
+        width: 132px;
+    }
+}
