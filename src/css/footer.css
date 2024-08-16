@@ -53,6 +53,10 @@ footer > div {
     outline: none;
 }
 
+#newsletter > section > button:hover {
+    cursor: pointer;
+}
+
 #newsletter > section > button {
     background-color: white;
     border: none;
