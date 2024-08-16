@@ -179,7 +179,7 @@ new_arrival.forEach(({name, image, price, discount, stars}) => {
             <section>
                 <img class="card-image" src="${image}"/>
             </section>
-            <article>
+            <article class="product-info">
                 <p>${name}</p>
                 <span>
                 ${reviewRate(stars)}

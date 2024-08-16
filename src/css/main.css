@@ -11,26 +11,26 @@
     overflow: hidden;
 }
 
-#panel > article {
+.hero {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     flex: 2;
 }
 
-#panel > article > h2 {
+.hero > h2 {
     font-size: 50px;
     font-family: 'Integral CF', sans-serif;
     font-weight: 800;
 }
 
-#panel > article > p {
+.hero > p {
     margin-top: 10px;
     color: rgba(0, 0, 0, 0.6);
     width: 400px;
 }
 
-#panel > article > button {
+.hero > button {
     margin: 30px 0px;
     padding: 15px;
     width: 200px;
@@ -46,16 +46,16 @@
     width: 200px;
 }
 
-#panel > article > div > article > strong {
+.hero > div > article > strong {
     font-size: 40px;
     font-weight: 800;
 }
 
-#panel > article > div > article > p {
+.hero > div > article > p {
     color: rgba(0, 0, 0, 0.6);
 }
 
-#panel > article > div {
+.hero > div {
     display: flex;
     gap: 30px;
 }
@@ -192,21 +192,21 @@
     margin-bottom: 50px;
 }
 
-.cards > article > span {
+.product-info > span {
     display: flex;
 }
 
-.cards > article > p {
+.product-info > p {
     font-size: 22px;
     font-weight: 700;
 }
 
-.cards > article > span > p {
+.product-info > span > p {
     color: black;
     margin-left: 10px;
 }
 
-.cards > article > span > p > span {
+.product-info > span > p > span {
     color: grey;
     font-size: 15px;
 }
@@ -330,23 +330,23 @@ button:active {
     overflow: hidden;
 }
 
-#carousel > section {
+#carousel-header {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#carousel > section > h2 {
+#carousel-header > h2 {
     font-size: 45px;
     font-weight: 800;
 }
 
-#carousel > section > div > img {
+#carousel-header > div > img {
     transition: 0.5s;
 }
 
-#carousel > section > div >img:hover {
+#carousel-header > div >img:hover {
     transform: scale(1.10);
 }
 
@@ -360,7 +360,7 @@ button:active {
     overflow: hidden;
 }
 
-#carousel > section > div > img {
+#carousel-header > div > img {
     cursor: pointer;
 }
 
@@ -404,16 +404,16 @@ button:active {
 
 @media (max-width: 1300px) {
 
-    #panel > article {
+    .hero {
         flex: 1;
         width: 40%;
     }
 
-    #panel > article > h2 {
+    .hero > h2 {
         font-size: 35px;
     }
 
-    #panel > article > div {
+    .hero > div {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -422,16 +422,16 @@ button:active {
 
 
 @media (max-width: 1200px) {
-    #panel > article > div > article {
+    .hero > div > article {
         width: 150px;
     }
 
-    #panel > article > button {
+    .hero > button {
         align-self: center;
         margin-right: 20px;
     }
 
-    #panel > article > div > article > strong {
+    .hero > div > article > strong {
         font-size: 30px;
         font-weight: 800;
     }
@@ -455,7 +455,7 @@ button:active {
         height: 1800px;
     }
 
-    #carousel > section > div {
+    #carousel-header > div {
         width: 100px;
     }
 
@@ -489,7 +489,7 @@ button:active {
     }
 
 
-    #panel > article {
+    .hero {
         align-items: center;
         width: 100%;
     }
@@ -506,21 +506,21 @@ button:active {
         margin-left: 100px;
     }
 
-    #panel > article > h2 {
+    .hero > h2 {
         font-size: 30px;
     }
 
-    #panel > article > button {
+    .hero > button {
         padding: 10px;
         width: 120px;
         margin: 10px auto;
     }
 
-    #panel > article > div > article > strong {
+    .hero > div > article > strong {
         font-size: 20px;
     }
 
-    #panel > article > div > article > p {
+    .hero > div > article > p {
         font-size: 14px;
     }
 
@@ -547,31 +547,31 @@ button:active {
         flex-direction: column;
     }
 
-    #panel > article {
+    .hero {
         margin-top: 5px;
     }
 
-    #panel > article > h2 {
+    .hero > h2 {
         align-self: flex-start;
     }
 
-    #panel > article > p {
+    .hero > p {
         align-self: flex-start;
         font-size: 13px;
         width: 300px;
         text-align: start;
     }
 
-    #panel > article > button {
+    .hero > button {
         width: 90%;
         margin-bottom: 20px;
     }
 
-    #panel > article > div {
+    .hero > div {
         justify-content: center;
     }
 
-    #panel > article > div > article {
+    .hero > div > article {
         text-align: center;
         width: 120px;
     }
@@ -643,24 +643,24 @@ button:active {
         height: 160px;
     }
 
-    .cards > article {
+    .product-info {
         height: 100px;
     }
 
-    .cards > article > p {
+    .product-info > p {
         font-size: 14px;
     }
 
-    .cards > article > span {
+    .product-info > span {
         width: 15px;
         height: 15px;
     }
 
-    .cards > article > span > p {
+    .product-info > span > p {
         font-size: 14px;
     }
 
-    .cards > article > span > p > span {
+    .product-info > span > p > span {
         font-size: 13px;
     }
 
@@ -705,7 +705,7 @@ button:active {
         margin-top: 50px;
     }
 
-    #carousel > section > h2 {
+    #carousel-header > h2 {
         font-size: 30px;
     }
 
@@ -713,7 +713,7 @@ button:active {
         gap: 10px;
     }
 
-    #carousel > section > div {
+    #carousel-header > div {
         width: 100px;
     }
 

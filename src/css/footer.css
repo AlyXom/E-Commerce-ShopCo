@@ -66,24 +66,24 @@ footer > div {
     height: 180px;
     display: flex;
 }
-#contact > section > h2 {
+#social-container > h2 {
     font-size: 32px;
     font-weight: 800;
     margin-bottom: 25px;
 }
 
-#contact > section > p {
+#social-container > p {
     width: 250px;
     height: 68px;
     color: rgba(0, 0, 0, 0.6);
 }
 
-#contact > section > span {
+#social-container > span {
     display: flex;
     gap: 12px;
 }
 
-#contact > section > span > img {
+#social-container > span > img {
     border: rgba(0, 0, 0, 0.2) 1px solid;
     width: 20px;
     height: 20px;
@@ -108,18 +108,18 @@ footer > div {
 
 
 
-#footer-navigation > div section > h3 {
+.about-company section > h3 {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-#footer-navigation > div section > p {
+.about-company section > p {
     margin-bottom: 15px;
     color: rgba(0, 0, 0, 0.6);
 }
 
-#footer-navigation > div section > p:hover {
+.about-company section > p:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -132,12 +132,16 @@ footer > div {
     justify-content: space-between;
 }
 
-#copyright > span {
+#copyright > p {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.payment-forms {
     display: flex;
     gap: 12px;
 }
 
-#copyright > span > div {
+.payment-forms > div {
     display: flex;
     background-color: white;
     width: 40px;
@@ -146,7 +150,7 @@ footer > div {
     border-radius: 4px;
 }
 
-#copyright > span > div > img {
+.payment-forms > div > img {
     width: 100%;
 }
 
@@ -154,15 +158,15 @@ footer > div {
 
 @media (max-width: 1200px) {
 
-    footer > div > form > h2 {
+    #newsletter h2 {
         font-size: 30px;
     }
 
-    footer > div > form > section {
+    #newsletter section {
         width: 300px;
     }
 
-    footer > div > form > section > span {
+    #newsletter section > span {
         width: 90%;
     }
 }
@@ -214,7 +218,7 @@ footer > div {
         height: 200px;
     }
 
-    #footer-navigation > div > section {
+    .about-company > section {
         height: 100%;
         width: 50%;
     }
