@@ -3,80 +3,10 @@ const modal = document.getElementById("modal") as HTMLDivElement
 const drawer = document.querySelector(".drawer") as HTMLDivElement
 const searchBarMobile = document.getElementById("searchBarMobile") as HTMLDivElement
 const popup = document.getElementById("popup") as HTMLElement
-const clothes = document.getElementById("clothes") as HTMLElement
 const topSelling = document.getElementById("topSelling") as HTMLElement
+const clothes = document.getElementById("clothes") as HTMLElement
 const box = document.getElementById("box") as HTMLDivElement
 const boxSelling = document.getElementById("boxSelling") as HTMLDivElement
-
-
-function modalTrueOrFalse() {
-    if(modal.style.left == "0px") {
-        modal.style.left = "-1400px"
-    } else {
-        modal.style.left = "0px"
-    }
-}
-
-console.log(drawer)
-
-function drawerTrueOrFalse() {
-    if(drawer.style.height == "0px") {
-        drawer.style.height = "80px"
-    } else {
-        drawer.style.height = "0px"
-    }
-}
-
-function showOrHideBar() {
-    if(searchBarMobile.style.height == "0px") {
-        searchBarMobile.style.height = "35px"
-    } else {
-        searchBarMobile.style.height = "0px"
-    }
-}
-
-function closePopup() {
-    popup.style.height = "0px"
-}
-
-function reviewRate(stars: number) {
-    let starsHtml = ""
-    for(var n = 0; n < stars; n++) {
-        var midstar = stars - n
-
-        
-
-        if(midstar == 0.5) {
-            starsHtml += "<img src='src/assets/icons/mid-star.svg' />"
-        } else {
-            starsHtml += "<img src='src/assets/icons/rating-star.svg' />"
-        }
-    }
-
-    return starsHtml
-}
-
-function viewAll(element: HTMLButtonElement) {
-
-    if(element.id == "arrival") {
-        if(box.className == "switchOn") {
-            box.className = "switchOff"
-            element.textContent = "View All"
-            
-        } else {
-            box.className = "switchOn"
-            element.textContent = "View Less"
-        }
-    } else {
-        if(boxSelling.className == "switchOn") {
-            boxSelling.className = "switchOff"
-            element.textContent = "View All"
-        } else {
-            boxSelling.className = "switchOn"
-            element.textContent = "View Less"
-        }
-    }
-}
 
 interface Clothes {
     name: string,
@@ -86,8 +16,7 @@ interface Clothes {
     discount: number
 }
 
-
-const new_arrival: Clothes[] = [
+const object: Clothes[] = [
     {
         name: "T-shirt with Tape Details",
         image: "src/assets/clothes/t-shirt-1.png",
@@ -169,48 +98,109 @@ const new_arrival: Clothes[] = [
 ]
 
 
-new_arrival.forEach(({name, image, price, discount, stars}) => {
-    clothes.innerHTML += `
-        <div class="cards">
-            <section>
-                <img class="card-image" src="${image}"/>
-            </section>
-            <article class="product-info">
-                <p>${name}</p>
-                <span>
-                ${reviewRate(stars)}
-                <p>${stars}/<span>5</span></p>
-                </span>
-                <div id="infos">
-                    <p>$${Math.floor(price - ((discount / 100) * price))}</p>
-                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
-                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
-                </div>
-            </article>
-        </div>
-    `
-})
+function modalTrueOrFalse() {
+    if(modal.style.left == "0px") {
+        modal.style.left = "-1400px"
+    } else {
+        modal.style.left = "0px"
+    }
+}
 
-const top_selling: Clothes[] = new_arrival.filter((item => item.stars >= 4)).sort((a, b) => a.stars - b.stars).reverse()
+function drawerTrueOrFalse() {
+    if(drawer.style.height == "0px") {
+        drawer.style.height = "80px"
+    } else {
+        drawer.style.height = "0px"
+    }
+}
 
-top_selling.forEach(({name, image, price, discount, stars}) => {
-    topSelling.innerHTML += `
-        <div class="cards">
-            <section>
-                <img class="card-image" src="${image}"/>
-            </section>
-            <article class="product-info">
-                <p>${name}</p>
-                <span>
-                ${reviewRate(stars)}
-                <p>${stars}/<span>5</span></p>
-                </span>
-                <div id="infos">
-                    <p>$${Math.floor(price - ((discount / 100) * price))}</p>
-                    <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
-                    ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
-                </div>
-            </article>
-        </div>
-    `
-})
+function showOrHideBar() {
+    if(searchBarMobile.style.height == "0px") {
+        searchBarMobile.style.height = "35px"
+    } else {
+        searchBarMobile.style.height = "0px"
+    }
+}
+
+function closePopup() {
+    popup.style.height = "0px"
+}
+
+function viewAll(element: HTMLButtonElement) {
+
+    if(element.id == "arrival") {
+        if(box.className == "switchOn") {
+            box.className = "switchOff"
+            element.textContent = "View All"
+            
+        } else {
+            box.className = "switchOn"
+            element.textContent = "View Less"
+        }
+    } else {
+        if(boxSelling.className == "switchOn") {
+            boxSelling.className = "switchOff"
+            element.textContent = "View All"
+        } else {
+            boxSelling.className = "switchOn"
+            element.textContent = "View Less"
+        }
+    }
+}
+
+function reviewRate(stars: number) {
+    let starsHtml = ""
+    for(var n = 0; n < stars; n++) {
+        var midstar = stars - n
+
+        
+
+        if(midstar == 0.5) {
+            starsHtml += "<img src='src/assets/icons/mid-star.svg' />"
+        } else {
+            starsHtml += "<img src='src/assets/icons/rating-star.svg' />"
+        }
+    }
+
+    return starsHtml
+}
+
+// Renderiza na tela as roupas 
+class ClothesObject  {
+    clothes: Clothes[]
+    
+    constructor(clothes: Clothes[]) {
+        this.clothes = clothes
+    }
+
+    render(elementName: HTMLElement): void {
+        let filteredClothes: Clothes[] = elementName == topSelling ? this.clothes.filter((item => item.stars >= 4)).sort((a, b) => a.stars - b.stars).reverse() : this.clothes
+
+        filteredClothes.forEach(({name, image, price, discount, stars}) => {
+            elementName.innerHTML += `
+                <div class="cards">
+                    <section>
+                        <img class="card-image" src="${image}"/>
+                    </section>
+                    <article class="product-info">
+                        <p>${name}</p>
+                        <span>
+                        ${reviewRate(stars)}
+                        <p>${stars}/<span>5</span></p>
+                        </span>
+                        <div id="infos">
+                            <p>$${Math.floor(price - ((discount / 100) * price))}</p>
+                            <p class="discount">${discount == 0 ? "" : `$${price}`}</p>
+                            ${discount == 0 ? `<span></span>` : `<span class="float-discount">-${discount}%</span>`}
+                        </div>
+                    </article>
+                </div>`
+        })
+    }
+}
+
+const newArrival = new ClothesObject(object)
+const top_selling = new ClothesObject(object)
+
+newArrival.render(clothes)
+top_selling.render(topSelling)
