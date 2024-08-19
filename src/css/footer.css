@@ -96,6 +96,12 @@ footer > div {
     background-color: white;
     aspect-ratio: 3/2;
     object-fit: contain;
+    transition: 0.2s;
+}
+
+#social-container > span > img:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
 }
 
 #footer-navigation {
@@ -152,6 +158,10 @@ footer > div {
     padding: 2px 5px;
     height: 28px;
     border-radius: 4px;
+}
+
+.payment-forms > div:hover {
+    cursor: pointer;
 }
 
 .payment-forms > div > img {
